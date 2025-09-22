@@ -4,6 +4,30 @@ A **production‑grade, fully reproducible** 16S rRNA amplicon pipeline you can 
 Primary track uses **QIIME 2 CLI (Amplicon 2025.7)**; secondary track uses **R/DADA2** to create a parallel set of outputs.  
 Everything is automated by `run.sh` and version‑pinned via conda `environment.yml`. QIIME 2 is bootstrapped as its **own, official** environment so it stays conflict‑free.
 
+## Installing Mamba (recommended)
+
+This pipeline requires **Mamba** (a fast drop-in replacement for conda).  
+If you don’t already have conda or mamba installed, follow one of the options below.
+
+### Option 1: Install Mambaforge (recommended)
+
+```bash
+# Download Mambaforge installer for Linux (x86_64)
+curl -L -O https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-Linux-x86_64.sh
+
+# Run the installer
+bash Mambaforge-Linux-x86_64.sh -b -p $HOME/mambaforge
+
+# Initialize shell (bash example)
+$HOME/mambaforge/bin/mamba init bash
+source ~/.bashrc
+```
+
+```bash
+mamba --version
+conda --version
+```
+
 ## Quick start
 
 ```bash
