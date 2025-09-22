@@ -1,0 +1,7 @@
+{
+  "name": "16S-pipeline (QIIME2 + R/DADA2)",
+  "image": "mcr.microsoft.com/devcontainers/miniconda:0-3",
+  "postCreateCommand": "mamba env create -f environment.yml && bash run.sh --bootstrap-qiime2",
+  "remoteUser": "vscode",
+  "updateContentCommand": ""
+}

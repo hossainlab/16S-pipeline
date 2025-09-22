@@ -1,0 +1,32 @@
+# Required inputs
+manifest: "manifests/manifest.csv"          # QIIME 2 manifest (PairedEndFastqManifestPhred33V2)
+metadata: "metadata/metadata.tsv"           # sample metadata (QIIME 2 format; tab-delimited)
+
+# Primers (example V4 515F/806R)
+primer_f: "GTGCCAGCMGCCGCGGTAA"
+primer_r: "GGACTACHVGGGTWTCTAAT"
+
+# Denoising / trimming
+trim_left_f: 0
+trim_left_r: 0
+trunc_len_f: 240
+trunc_len_r: 200
+
+# Diversity
+sampling_depth: 10000
+
+# Taxonomy: QIIME 2 classifier (auto-download + verify if missing)
+classifier_qza: "ref/classifiers/silva-138-99-nb-classifier.qza"
+
+# Threads
+threads: 4
+
+# R/DADA2 options
+dada2:
+  max_ee_f: 2
+  max_ee_r: 2
+  trunc_q: 2
+  min_len: 50
+  pool: "pseudo"           # "pseudo", "true", or "independent"
+  tax_train_set: "ref/dada2/silva_nr99_v138.1_train_set.fa.gz"        # optional (if missing, taxonomy is skipped)
+  tax_species:    "ref/dada2/silva_species_assignment_v138.1.fa.gz"   # optional
