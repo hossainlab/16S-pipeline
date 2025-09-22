@@ -9,8 +9,6 @@ Everything is automated by `run.sh` and version‑pinned via conda `environment.
 This pipeline requires **Mamba** (a fast drop-in replacement for conda).  
 If you don’t already have conda or mamba installed, follow one of the options below.
 
-### Option 1: Install Mambaforge (recommended)
-
 ```bash
 # Download Mambaforge installer for Linux (x86_64)
 curl -L -O https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-Linux-x86_64.sh
